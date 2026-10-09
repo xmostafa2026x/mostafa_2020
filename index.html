@@ -3,125 +3,445 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Mostafa Fatahi</title>
+
+    <meta name="description"
+          content="وب‌سایت شخصی مصطفی فتاحی، طراح و توسعه‌دهنده وب">
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-    <nav>
-        <h2><span>MY PORTFOLIO</span></h2>
+    <!-- پس‌زمینه -->
+    <div class="background-glow"></div>
 
-        <div class="menu">
-            <a href="#home">خانه</a>
-               <a href="#about"
-             درباره  </a>
-            <a href="#skills">مهارت‌ها</a>
-            <a href="#projects">پروژه‌ها</a>
-            <a href="#contact">تماس</a>
-        </div>
-    </nav>
-</header>
+    <!-- هدر -->
+    <header class="header">
+        <nav class="navbar">
 
-<section id="home" class="hero">
-    <div class="hero-text">
-        <p class="small">سلام</p>
+            <a href="#home" class="logo">
+                <span class="logo-icon">M</span>
+                <span>
+                    <strong>MOSTAFA</strong>
+                    <small>Web Developer</small>
+                </span>
+            </a>
 
-        <h1> <span>Mostafa Fatahi</span></h1>
+            <button class="menu-toggle"
+                    id="menuToggle"
+                    aria-label="باز کردن منو">
+                ☰
+            </button>
 
-        <h2>طراح و توسعه‌دهنده وب</h2>
+            <div class="nav-links" id="navLinks">
+                <a href="#home" class="active">خانه</a>
+                <a href="#about">درباره من</a>
+                <a href="#skills">مهارت‌ها</a>
+                <a href="#projects">پروژه‌ها</a>
+                <a href="#contact">ارتباط با من</a>
+            </div>
 
-        <p>در زمینه طراحی و توسعه وب فعالیت می‌کنم و با تمرکز بر ایجاد وب‌سایت‌های حرفه‌ای، مدرن و کاربرپسند، همواره در مسیر یادگیری و ارتقای مهارت‌های خود هستم.
+            <button id="themeToggle"
+                    class="theme-toggle"
+                    aria-label="تغییر تم">
+                ☀
+            </button>
+
+        </nav>
+    </header>
+
+
+    <main>
+
+        <!-- صفحه اصلی -->
+        <section class="hero" id="home">
+
+            <div class="hero-content reveal">
+
+                <span class="eyebrow">
+                    WELCOME TO MY WORLD
+                </span>
+
+                <p class="intro">سلام</p>
+
+                <h1>
+            مصطفی
+                    <span class="gradient-text">فتاحی</span>
+                </h1>
+
+                <h2>
+                    طراح و توسعه‌دهنده وب
+                </h2>
+
+                <p class="hero-description">
+                    در زمینه طراحی و توسعه وب فعالیت می‌کنم و با تمرکز
+                    بر ایجاد وب‌سایت‌های حرفه‌ای، مدرن و کاربرپسند،
+                    همواره در مسیر یادگیری و ارتقای مهارت‌های خود هستم.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn primary-btn">
+                        مشاهده پروژه‌ها ↗
+                    </a>
+
+                    <a href="#contact" class="btn secondary-btn">
+                        ارتباط با من
+                    </a>
+                </div>
+
+                <div class="hero-stats">
+                    <div>
+                        <strong>HTML</strong>
+                        <span>ساختار وب</span>
+                    </div>
+
+                    <div>
+                        <strong>CSS</strong>
+                        <span>طراحی وب</span>
+                    </div>
+
+                    <div>
+                        <strong>JS</strong>
+                        <span>برنامه‌نویسی</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="hero-visual reveal">
+
+                <div class="orbit orbit-one"></div>
+                <div class="orbit orbit-two"></div>
+
+                <div class="profile-card">
+
+                    <div class="profile-top">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <div class="profile-avatar">M</div>
+
+                    <h3>مصطفی فتاحی</h3>
+                    <p>Web Developer</p>
+
+                    <div class="profile-line"></div>
+
+                    <div class="code-preview">
+                        <span>&lt;developer&gt;</span>
+                        <span>Creative &amp; Modern</span>
+                        <span>&lt;/developer&gt;</span>
+                    </div>
+
+                    <div class="profile-badge">
+                        ✦ Creative Developer
+                    </div>
+
+                </div>
+
+                <div class="floating-badge badge-html">
+                    <b>HTML</b>
+                    <span>HTML</span>
+                </div>
+
+                <div class="floating-badge badge-css">
+                    <b>CSS</b>
+                    <span>CSS</span>
+                </div>
+
+                <div class="floating-badge badge-js">
+                    <b>JS</b>
+                    <span>JavaScript</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- درباره من -->
+        <section class="section about-section" id="about">
+
+            <div class="section-heading reveal">
+                <span class="eyebrow">ABOUT ME</span>
+                <h2>درباره <span class="gradient-text">من</span></h2>
+            </div>
+
+            <div class="about-grid">
+
+                <div class="about-text reveal">
+                    <h3>طراحی با خلاقیت، توسعه با دقت</h3>
+
+                    <p>
+                        من یک علاقه‌مند به برنامه‌نویسی و طراحی وب هستم.
+                        هدفم ساخت وب‌سایت‌هایی با طراحی جذاب،
+                        عملکرد مناسب و تجربه کاربری مطلوب است.
+                    </p>
+
+                    <p>
+                        تلاش می‌کنم با یادگیری مداوم و اجرای پروژه‌های
+                        کاربردی، مهارت‌های فنی خود را ارتقا دهم.
+                    </p>
+
+                    <div class="about-tags">
+                        <span>✦ طراحی وب</span>
+                        <span>✦ توسعه وب</span>
+                        <span>✦ یادگیری مداوم</span>
+                    </div>
+                </div>
+
+                <div class="about-card reveal">
+                    <div class="about-avatar">M</div>
+                    <h3>مصطفی فتاحی</h3>
+                    <p>طراح و توسعه‌دهنده وب</p>
+                    <span class="availability">
+                        <i></i>
+                        آماده یادگیری و همکاری
+                    </span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- مهارت‌ها -->
+        <section class="section" id="skills">
+
+            <div class="section-heading reveal">
+                <span class="eyebrow">MY SKILLS</span>
+                <h2>مهارت‌های <span class="gradient-text">من</span></h2>
+                <p>ابزارهایی که برای ساخت وب‌سایت استفاده می‌شوند.</p>
+            </div>
+
+            <div class="skills-grid">
+
+                <div class="skill-card reveal">
+                    <div class="skill-icon html-icon">HTML</div>
+                    <h3>HTML</h3>
+                    <p>ساختار صفحات وب</p>
+                    <div class="progress">
+                        <span style="--progress:90%"></span>
+                    </div>
+                    <small>ساختار صفحات</small>
+                </div>
+
+                <div class="skill-card reveal">
+                    <div class="skill-icon css-icon">CSS</div>
+                    <h3>CSS</h3>
+                    <p>طراحی و استایل صفحات</p>
+                    <div class="progress">
+                        <span style="--progress:80%"></span>
+                    </div>
+                    <small>طراحی رابط کاربری</small>
+                </div>
+
+                <div class="skill-card reveal">
+                    <div class="skill-icon js-icon">JS</div>
+                    <h3>JavaScript</h3>
+                    <p>تعامل و پویایی سایت</p>
+                    <div class="progress">
+                        <span style="--progress:65%"></span>
+                    </div>
+                    <small>برنامه‌نویسی وب</small>
+                </div>
+
+            </div>
+
+            <p class="note">
+                درصدها صرفاً نمایشی هستند و می‌توانی آن‌ها را مطابق
+                مهارت واقعی خودت تغییر بدهی.
+            </p>
+
+        </section>
+
+
+        <!-- پروژه‌ها -->
+        <section class="section" id="projects">
+
+            <div class="section-heading reveal">
+                <span class="eyebrow">MY PROJECTS</span>
+                <h2>پروژه‌های <span class="gradient-text">من</span></h2>
+                <p>نمونه‌هایی از پروژه‌های طراحی و توسعه وب.</p>
+            </div>
+
+            <div class="projects-grid">
+
+                <article class="project-card reveal">
+                    <div class="project-icon">🌐</div>
+                    <span class="project-number">PROJECT 01</span>
+                    <h3>وب‌سایت شخصی</h3>
+                    <p>
+                        یک وب‌سایت برای معرفی مهارت‌ها،
+                        فعالیت‌ها و نمونه‌کارها.
+                    </p>
+                    <div class="project-tech">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JS</span>
+                    </div>
+                    <a href="#contact" class="project-link">
+                        درباره پروژه ↗
+                    </a>
+                </article>
+
+                <article class="project-card reveal">
+                    <div class="project-icon">🎮</div>
+                    <span class="project-number">PROJECT 02</span>
+                    <h3>وب‌سایت گیمینگ</h3>
+                    <p>
+                        طراحی سایتی برای انتشار اخبار،
+                        معرفی بازی‌ها و محتوای گیمینگ.
+                    </p>
+                    <div class="project-tech">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JS</span>
+                    </div>
+                    <a href="#contact" class="project-link">
+                        درباره پروژه ↗
+                    </a>
+                </article>
+
+                <article class="project-card reveal">
+                    <div class="project-icon">💻</div>
+                    <span class="project-number">PROJECT 03</span>
+                    <h3>پروژه طراحی وب</h3>
+                    <p>
+                        طراحی یک رابط کاربری مدرن،
+                        واکنش‌گرا و مناسب موبایل.
+                    </p>
+                    <div class="project-tech">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>Responsive</span>
+                    </div>
+                    <a href="#contact" class="project-link">
+                        درباره پروژه ↗
+                    </a>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- تماس -->
+        <section class="section contact-section" id="contact">
+
+            <div class="section-heading reveal">
+                <span class="eyebrow">LET'S STAY IN TOUCH</span>
+                <h2>ارتباط با <span class="gradient-text">من</span></h2>
+                <p>
+                    برای پیشنهاد همکاری یا ارسال پیام،
+                    از فرم زیر استفاده کنید.
+                </p>
+            </div>
+
+            <div class="contact-grid">
+
+                <div class="contact-info reveal">
+
+                    <div class="contact-info-card">
+                        <span class="contact-icon">✉</span>
+                        <div>
+                            <h3>ارتباط با من</h3>
+                            <p>از طریق فرم پیام ارسال کنید.</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <span class="contact-icon">✦</span>
+                        <div>
+                            <h3>زمینه فعالیت</h3>
+                            <p>طراحی و توسعه وب</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <span class="contact-icon">⌘</span>
+                        <div>
+                            <h3>پروژه‌های جدید</h3>
+                            <p>آماده یادگیری و اجرای ایده‌های جدید</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <form class="contact-form reveal" id="contactForm">
+
+                    <h3>فرم تماس ✉</h3>
+
+                    <label for="name">نام شما</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="نام خود را وارد کنید"
+                        required
+                    >
+
+                    <label for="email">ایمیل شما</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="example@email.com"
+                        required
+                    >
+
+                    <label for="message">پیام شما</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        placeholder="پیام خود را بنویسید..."
+                        required
+                    ></textarea>
+
+                    <button type="submit" class="btn primary-btn">
+                        ارسال پیام ↗
+                    </button>
+
+                    <p class="form-note">
+                        این فرم در حال حاضر نمایشی است و هنوز به سرویس
+                        ارسال ایمیل متصل نشده است.
+                    </p>
+
+                    <p id="formStatus" aria-live="polite"></p>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- فوتر -->
+    <footer class="footer">
+
+        <a href="#home" class="logo">
+            <span class="logo-icon">M</span>
+            <span>
+                <strong>MOSTAFA</strong>
+                <small>Web Developer</small>
+            </span>
+        </a>
+
+        <p>
+            © <span id="currentYear">2026</span>
+            تمام حقوق محفوظ است.
         </p>
 
-        <a href="#projects" class="btn">مشاهده پروژه‌ها</a>
-    </div>
+        <a href="#home" class="back-top">بازگشت به بالا ↑</a>
 
-    <div class="profile">
-        <div class="circle">
-            M
-        </div>
-    </div>
-</section>
+    </footer>
 
-
-<section id="skills" class="section">
-    <h2 class="title">مهارت‌ها <span></span></h2>
-
-    <div class="skills">
-
-        <div class="skill">
-            <h3>HTML</h3>
-            <div class="progress">
-                <div style="width:90%"></div>
-            </div>
-        </div>
-
-        <div class="skill">
-            <h3>CSS</h3>
-            <div class="progress">
-                <div style="width:80%"></div>
-            </div>
-        </div>
-
-        <div class="skill">
-            <h3>JavaScript</h3>
-            <div class="progress">
-                <div style="width:65%"></div>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-<section id="projects" class="section">
-    <h2 class="title">پروژه‌ها <span></span></h2>
-
-    <div class="projects">
-
-        <div class="card">
-            <div class="icon">🌐</div>
-            <h3>پروژه سایت شخصی</h3>
-            <p>یک سایت شخصی مدرن و واکنش‌گرا.</p>
-            <button>مشاهده پروژه</button>
-        </div>
-
-        <div class="card">
-            <div class="icon">🎮</div>
-            <h3>سایت گیمینگ</h3>
-            <p>طراحی سایت برای اخبار و محتوای بازی.</p>
-            <button>مشاهده پروژه</button>
-        </div>
-
-        <div class="card">
-            <div class="icon">💻</div>
-            <h3>پروژه وب</h3>
-            <p>یک پروژه مدرن با HTML و CSS.</p>
-            <button>مشاهده پروژه</button>
-        </div>
-
-    </div>
-</section>
-
-<section id="contact" class="section contact">
-    <h2 class="title"><span>راه های ارتباطی</span></h2>
-
-    <form id="contactForm">
-
-        <input type="text" placeholder="نام شما" required>
-
-        <input type="email" placeholder="ایمیل شما" required>
-
-        <textarea placeholder="پیام شما" required></textarea>
-
-        <button type="submit" class="btn">ارسال پیام</button>
-
-    </form>
-</section>
-
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
-            </html>
+                </html>
